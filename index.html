@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>My Portfolio</title>
+  <title>Neil A — Portfolio</title>
   <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet"/>
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -94,7 +94,7 @@
     .hero-desc {
       font-size: 1.15rem;
       color: var(--muted);
-      max-width: 520px;
+      max-width: 560px;
       margin-bottom: 2.5rem;
       line-height: 1.8;
     }
@@ -150,6 +150,8 @@
       margin-bottom: 3rem;
       line-height: 1.15;
     }
+
+    .section-title em { color: var(--accent); }
 
     /* ABOUT */
     .about-grid {
@@ -374,7 +376,7 @@
 
 <!-- NAV -->
 <nav>
-  <a href="#" class="nav-logo">Your Name</a>
+  <a href="#" class="nav-logo">Neil A</a>
   <ul class="nav-links">
     <li><a href="#about">About</a></li>
     <li><a href="#projects">Work</a></li>
@@ -385,9 +387,11 @@
 <!-- HERO -->
 <div class="hero">
   <p class="hero-tag fade-up">Working with code and AI since 2024</p>
-  <h1 class="fade-up">Making <em>digital</em><br>Projects that leave a<em> mark</em>.</h1>
+  <h1 class="fade-up">Making <em>digital</em><br>projects that leave a <em>mark</em>.</h1>
   <p class="hero-desc fade-up">
-    I'm a developer that mainly works with python, Esp32s and HTML
+    I'm a developer who works across software and hardware — training
+    machine learning models in Python, building ESP32 electronics, and
+    designing for the web.
   </p>
   <div class="hero-actions fade-up">
     <a href="#projects" class="btn btn-primary">View my projects</a>
@@ -402,29 +406,44 @@
   <div class="about-grid">
     <div class="about-text">
       <p>
-        Hi — I'm Neil A, a developer based in the Bay Area. Building projects
-        for fun as well as with intention and with the intention to learn
+        Hi — I'm Neil A, a developer based in the Bay Area. I build projects
+        for fun, but always with a purpose and with the goal of learning
+        something new — from medical imaging AI to custom PCBs.
       </p>
       <p>
-        When I'm not coding, I enjoy watching youtube, playing with AI, and exploring new
-        tools and ideas. 
+        Outside of coding, I'm a 2nd degree black belt working toward my
+        3rd, I've done three years of debate, I'm in DECA, and I run a
+        YouTube channel where I make edits. I also love experimenting with
+        AI and exploring new tools and ideas.
       </p>
       <div class="skills-list">
-        <span class="skill-tag">HTML / CSS</span>
-        <span class="skill-tag">AI</span>
-        <span class="skill-tag">CNN pipeline</span>
         <span class="skill-tag">Python</span>
+        <span class="skill-tag">PyTorch</span>
+        <span class="skill-tag">CNN pipelines</span>
+        <span class="skill-tag">AI / ML</span>
+        <span class="skill-tag">Ollama</span>
+        <span class="skill-tag">ESP32</span>
+        <span class="skill-tag">PCB design</span>
+        <span class="skill-tag">HTML / CSS</span>
         <span class="skill-tag">Cybersecurity</span>
       </div>
     </div>
     <div class="about-stats">
       <div class="stat">
         <div class="stat-number">2</div>
-        <div class="stat-label">Years of Learning</div>
+        <div class="stat-label">Years of learning</div>
       </div>
       <div class="stat">
         <div class="stat-number">5+</div>
         <div class="stat-label">Projects completed</div>
+      </div>
+      <div class="stat">
+        <div class="stat-number">0.82</div>
+        <div class="stat-label">Macro AUC on unseen hospital data (Project Chest)</div>
+      </div>
+      <div class="stat">
+        <div class="stat-number">~1k</div>
+        <div class="stat-label">YouTube subscribers</div>
       </div>
     </div>
   </div>
@@ -440,12 +459,17 @@
       <p class="project-number">01</p>
       <h3 class="project-title">Project Chest</h3>
       <p class="project-desc">
-        A full .pth AI model that anaylzes chest X-Rays and gives results with 14 known dieases it knows with a AUC ROC of 0.73
+        A research project on multi-label chest X-ray classification. I trained
+        ResNet18 models on public datasets (NIH, CheXpert, PadChest, RSNA, MIMIC),
+        then combined them with weight averaging ("model souping"). My best model
+        reaches a macro AUC of 0.82 on a fully held-out external dataset
+        (VinBigData). Entering ACSEF 2027.
       </p>
       <div class="project-tags">
-        <span class="project-tag">AI</span>
+        <span class="project-tag">PyTorch</span>
         <span class="project-tag">Python</span>
-        <span class="project-tag">CNN Pipeline</span>
+        <span class="project-tag">CNN pipeline</span>
+        <span class="project-tag">Model souping</span>
       </div>
     </div>
 
@@ -453,26 +477,60 @@
       <p class="project-number">02</p>
       <h3 class="project-title">Project JARVIS</h3>
       <p class="project-desc">
-       This a harness for a local ollama model it feature functions like opening apps on your desktop and with memory via
-       json
+        A harness for a local Ollama model that can take actions on your
+        desktop, like opening apps, and remembers things between sessions
+        using JSON-based memory.
       </p>
       <div class="project-tags">
         <span class="project-tag">Python</span>
         <span class="project-tag">Ollama</span>
+        <span class="project-tag">Local LLMs</span>
       </div>
     </div>
 
     <div class="project-card">
       <p class="project-number">03</p>
-      <h3 class="project-title">Project Gamma</h3>
+      <h3 class="project-title">Melodique</h3>
       <p class="project-desc">
-        An e-commerce storefront with a custom CMS, product search, and
-        seamless checkout experience.
+        A Python desktop music player with global media keys, Windows media
+        overlay support, a mini player and song-change notifications — plus a
+        companion server so an ESP32 with a touchscreen can work as a
+        wireless remote.
       </p>
       <div class="project-tags">
-        <span class="project-tag">Next.js</span>
-        <span class="project-tag">Stripe</span>
-        <span class="project-tag">Tailwind</span>
+        <span class="project-tag">Python</span>
+        <span class="project-tag">ESP32</span>
+        <span class="project-tag">Desktop UI</span>
+      </div>
+    </div>
+
+    <div class="project-card">
+      <p class="project-number">04</p>
+      <h3 class="project-title">Go-Kart Electronics</h3>
+      <p class="project-desc">
+        A custom PCB built around an ESP32-S3 that brings together I2C sensors —
+        accelerometer, time-of-flight and temperature — with a TFT display
+        for a go-kart.
+      </p>
+      <div class="project-tags">
+        <span class="project-tag">ESP32-S3</span>
+        <span class="project-tag">PCB design</span>
+        <span class="project-tag">I2C / SPI</span>
+      </div>
+    </div>
+
+    <div class="project-card">
+      <p class="project-number">05</p>
+      <h3 class="project-title">Trading Backtester</h3>
+      <p class="project-desc">
+        A Python backtester that pulls historical data from Yahoo Finance and
+        compares SuperTrend and RSI strategies against buy-and-hold across
+        stocks, ETFs and crypto, with and without trading fees.
+      </p>
+      <div class="project-tags">
+        <span class="project-tag">Python</span>
+        <span class="project-tag">yfinance</span>
+        <span class="project-tag">Data analysis</span>
       </div>
     </div>
 
@@ -490,6 +548,7 @@
         conversation. Drop me a message and I'll get back to you within a day.
       </p>
       <div class="contact-links">
+        <!-- TODO: replace with your real email, GitHub and LinkedIn -->
         <a href="mailto:you@email.com" class="contact-link">
           <div class="contact-icon">✉</div>
           you@email.com
@@ -524,7 +583,7 @@
 
 <!-- FOOTER -->
 <footer>
-  <span>© 2025 Your Name. All rights reserved.</span>
+  <span>© 2026 Neil A. All rights reserved.</span>
   <span>Built with care &amp; HTML</span>
 </footer>
 
